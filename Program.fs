@@ -259,6 +259,7 @@ let main argv =
                      arr2<-Destroyer1 B1 b
                      printfn " "
            let exists a b = Array.exists (Set.ofArray arr1).Contains arr2
+         
            let mutable flagg=0
            while(flagg=0)do
              begin
@@ -283,7 +284,7 @@ let main argv =
           
            let mutable  arr3=[||]
 
-           let   up_down3 () = random.Next(0, 2)
+           let   up_down3 () = random.Next(0, 99)
            let   up_down3=up_down3()
            if(up_down3=0)then
                     arr3 <- Destroyer  C1 c
@@ -292,7 +293,7 @@ let main argv =
                      arr3<-Destroyer1 C1 c
                      printfn " "
 
-           let existscomp a b = Array.exists (Set.ofArray merged).Contains arr3
+           let exists a b = Array.exists (Set.ofArray merged).Contains arr3
            let mutable flagg=0
            while(flagg=0)do
                    begin
@@ -314,8 +315,8 @@ let main argv =
                      end
                   end
           
-           let merged1comp =Array.append merged arr3
-           merged1comp
+           let merged1 =Array.append merged arr3
+           merged1
           
           let rand = new Random()
           let acomp() =
@@ -344,7 +345,7 @@ let main argv =
           let  merged1comp= Generate a b c
           
           let  merged1= Generate acomp bcomp ccomp
-         // printfn "%A" merged1
+          //printfn "%A" merged1
           //printfn "%A" merged1comp
           let mutable hitt=[||]
      
@@ -535,5 +536,13 @@ let main argv =
                     printfn"Computer Win"
     
          
+
+         
+
+          
+         
+            
+
+    
 
     0 // return an integer ex
